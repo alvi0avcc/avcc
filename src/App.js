@@ -7,12 +7,20 @@ function App() {
     <div className='App-screen'>
     <div className="App">
       <div className = 'header'>
+        <div></div>
         <div className='logo'>
           <img src='logo.svg' className="img-logo" alt="A.V.Cargo Control" />
           <span>
             AVCC testing platform
           </span>
         </div>
+
+        <a className='bmc-header'
+          title='Buy Me a Coffee'
+          href="https://www.buymeacoffee.com/alviuao" target="_blank" rel="noopener noreferrer">
+          <img className='bmc-gif' src="https://media.giphy.com/media/TDQOtnWgsBx99cNoyH/giphy.gif" alt="Buy Me A Coffee"/>
+        </a> 
+
       </div>
 
         <div className = 'main'>
@@ -63,7 +71,7 @@ function Menu (props) {
 function MenuMain (props) {
 
   return (
-          <div className='menu-main'>
+    <div className='menu-main'>
             <ul className='menu-ul'>
               <li 
                 className='menu-li'
@@ -97,7 +105,15 @@ function MenuMain (props) {
                 </div>
               </li>
             </ul>
-          </div>
+
+      <div className='bmc-menu'>
+      <a
+        title='Buy Me a Coffee'
+        href="https://www.buymeacoffee.com/alviuao" target="_blank" rel="noopener noreferrer">
+        <img className='bmc-gif2' src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExc21jbHVoNjdvencydnp6amI2eGc3ZGVoZzBodmEyc3Y1ZXFnNzYxdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/hXMGQqJFlIQMOjpsKC/giphy.gif" alt="Buy Me A Coffee"/>
+      </a>
+      </div>
+    </div>
 
   );
 }
