@@ -3,6 +3,28 @@ import './css/app.css';
 
 function App() {
   const [menuItem, setMenuItem] = React.useState(0);
+
+  function VisitCounter () {
+      try {
+        //fetch( "http://localhost/avcc/counter.php" , { 
+        fetch( "counter.php" , { 
+            method: 'GET',
+            headers: {
+              'Accept': '*/*',
+              'Content-Type': 'application/json;charset=utf-8',
+              //'Access-Control-Allow-Origin': 'http://localhost/avcc/counter.php'
+              'Access-Control-Allow-Origin': 'counter.php'
+            },
+            mode: 'cors',
+            }).then(response => response.json()).then((data) => {
+              console.log('VisitCounter2= ',data);
+        });
+      } catch (error) {
+          console.log('error= ',error);
+        }
+  }
+  
+  
   return (
     <div className='App-screen'>
     <div className="App">
@@ -51,6 +73,8 @@ function App() {
               target='_blank' rel="noopener noreferrer">
               LinkedIn
             </a>
+
+            <VisitCounter/>
 
           </div>
 
