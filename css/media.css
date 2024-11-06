@@ -1,0 +1,39 @@
+@media screen {
+    .aside-left-show-hide{
+        display: none;
+    }
+    .aside-right-show-hide{
+        display: none;
+    }
+    #left-menu-button{
+        transform: translateY(-20px) rotate(90deg);
+    }
+    #right-menu-button{
+        transform: translateY(-20px) rotate(-90deg);
+    }
+}
+
+@media screen and ( min-width: 576px ) {
+    .aside-left-show-hide{
+        display: flex;
+    }
+    .aside-right-show-hide{
+        display: none;
+    }  
+    #left-menu-button{
+        transform: translateY(2px) rotate(0deg);
+    }
+}
+
+@media screen and ( min-width: 768px ) {
+    .aside-left-show-hide{
+        display: flex;
+    }
+    .aside-right-show-hide{
+        display: flex;
+    }   
+    #right-menu-button{
+        transform: translateY(2px) rotate(0deg);
+    }  
+
+}
